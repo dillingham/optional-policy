@@ -9,7 +9,7 @@ trait OptionallyAuthorizesRequests
 {
     use AuthorizesRequests;
 
-    public function authorize($ability, $arguments)
+    public function authorize($ability, $arguments = [])
     {
         [$ability, $arguments] = $this->parseAbilityAndArguments($ability, $arguments);
 
